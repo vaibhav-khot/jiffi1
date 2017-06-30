@@ -1,0 +1,10 @@
+page-change-pass {
+ .item-input ion-input[type="password"]:after {
+    content: "\f2e9";
+    font-family: "Ionicons";
+    line-height: 2em;
+  }
+  ion-input[type="password"] {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,379 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header no-border>
+  <ion-toolbar class="cheader" trans>
+    <ion-buttons start>
+      <button menuToggle class="trans-background" >
+        <img src="assets/menu/menu.png" style="width: 20px;height: 20px">
+      </button>
+    </ion-buttons>
+    <div></div>
+    <ion-buttons end>
+      <button class="trans-background">
+        <img src="assets/menu/orderbook.png" class="menu-img">
+      </button>
+      <button class="trans-background">
+        <img src="assets/menu/watchlist.png" class="menu-img">
+      </button>
+      <button class="trans-background">
+        <img src="assets/menu/search.png" class="menu-img">
+      </button>
+      <button class="trans-background">
+        <img src="assets/menu/notification.png" class="menu-img">
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>-->
+<!--<ion-header no-border *ngIf="searchbar">
+  <ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+</ion-header>-->
+
+
+
+<!--<ion-content padding class="background" style="background-size: 100% 25%;">-->
+  <ion-content no-padding class="backcolor">
+  <ion-searchbar *ngIf="searchbar"
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+
+  <ion-grid no-padding no-margin>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ccard cardRedBorder">
+           <h2 class="cardH" text-uppercase>Sensex</h2>
+            <div><span class="cardN">4%(76.00%)</span><span class="cardT">29,520<ion-icon name="arrow-round-up" color="cblue"></ion-icon></span></div>
+            <h4><img src="assets/graph.png"></h4>
+        </ion-card>
+      </ion-col>
+      <ion-col >
+        <ion-card class="ccard cardBlueBorder">
+          <h2 class="cardH" text-uppercase>Niffty</h2>
+            <div><span class="cardN">4%(76.00%)</span><span class="cardT">9,520<ion-icon name="arrow-round-up" color="cblue"></ion-icon></span></div>
+            <div><img src="assets/graph.png"></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <!--<ion-row>
+      <ion-col>
+        <ion-card class="ccard">
+          <ion-card-header>
+            Header
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="ccard" >
+          <ion-card-header>
+            Header
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>-->
+  <!--</ion-grid>-->
+<!--<ion-item no-padding>  
+  <div style="display: flex">
+    <div style="flex: 2;
+    line-height: 29px;
+    padding-left: 16px;">
+     Watchlist
+</div>
+    <div >
+      <ion-buttons end>
+      <button ion-button class="trans-background cbutton" outline no-margin *ngIf="show" (click)="select('1')" [class.rbutton]="checkActiveButton('1')">
+        1
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('2')" [class.rbutton]="checkActiveButton('2')">
+        2
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('3')" [class.rbutton]="checkActiveButton('3')">
+        3
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('4')" [class.rbutton]="checkActiveButton('4')">
+        4
+      </button>
+       <button ion-button class="trans-background cbutton" outline no-margin *ngIf="show" (click)="select('5')" [class.rbutton]="checkActiveButton('5')">
+        5
+      </button>
+      <button ion-button class="trans-background cbutton" outline no-margin (click)="toggle()">
+       <ion-icon name="options"></ion-icon>
+      </button> 
+    </ion-buttons>
+   </div></div>
+   </ion-item>-->
+   <ion-row  [ngClass]="{'notifications': searchbar}" margin-left>
+   <!--<ion-row  margin-left>-->
+     
+      <div [ngClass]="{'scroll': searchbar}">
+        <!--<ion-list>-->
+   <ion-item no-padding no-margin class="backcolor" style="border-bottom: 1px solid;height:2em;line-height:2em;padding-bottom:6px;">
+     <ion-grid no-padding>
+      <ion-row padding-left>
+        <ion-col col-3  text-nowrap >
+          <span text-uppercase style="font-weight: bold;font-size: 0.8em;color: #195492;">Watchlist</span>
+        </ion-col>
+      <ion-col col-9 text-nowrap no-padding>
+       <ion-buttons end>
+      <button ion-button class="trans-background cbutton" outline no-margin *ngIf="show" (click)="select('1')" [class.rbutton]="checkActiveButton('1')">
+        1
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('2')" [class.rbutton]="checkActiveButton('2')">
+        2
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('3')" [class.rbutton]="checkActiveButton('3')">
+        3
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('4')" [class.rbutton]="checkActiveButton('4')">
+        4
+      </button>
+       <button ion-button class="trans-background cbutton" outline no-margin *ngIf="show" (click)="select('5')" [class.rbutton]="checkActiveButton('5')">
+        5
+      </button>
+      <button ion-button [ngClass]="{'red-background-border': show}" class="trans-background cbutton cOptionIcon" outline no-margin (click)="toggle()">
+       <ion-icon name="options"></ion-icon>
+      </button> 
+    </ion-buttons>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
+  </ion-item>
+   <!--<div [ngClass]="{'scroll': searchbar}">-->
+   <ion-list>
+     <!--<div [ngClass]="{'scroll': searchbar}">-->
+     <ion-item-sliding *ngFor="let item of items">
+ 
+    <ion-item no-padding  no-margin no-padding>
+      <ion-label style="margin: 0 0 0 0">
+    <ion-item (click)="openMenu(item)" no-lines no-padding [ngClass]="{'backcolor':!menuOpen(item)}">
+      <ion-label style="margin: 13px 0 0 0">
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col col-1 text-center>
+              <ion-icon name="radio-button-on" [color]="item.iconColor" style="text-shadow: 0px 0px 25px;font-size: 0.6em;"></ion-icon>
+              
+          </ion-col>
+          <ion-col col-4 text-justify>
+              <h2 style="font-size: 1.2rem">{{item.name}}</h2>
+              <h4 style="font-size: 1rem">{{item.subName}}</h4>
+          </ion-col>
+          <ion-col col-4 text-center>
+              <img [src]="item.graph">
+          </ion-col>
+          <ion-col col-3 text-right>
+              <h2 [attr.color]="item.textColor" padding-right style="font-size: 1.2rem">{{item.amount}}</h2>
+              <h3 style="font-size: 1rem">{{item.per}} <ion-icon [name]="item.arrow" [color]="item.textColor" padding-right></ion-icon></h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid >
+      </ion-label>
+    </ion-item>
+    <div *ngIf="menuOpen(item)" no-margin>
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col col-4 text-center>
+            <button ion-button full icon-start color="cblue" style="height: 3em;" no-margin>
+              <ion-icon name="add-circle" color="white" style="font-size:1.8rem"></ion-icon>
+              <span text-uppercase style="font-size:1rem">Buy</span>
+              </button>
+          </ion-col>
+          <ion-col col-4 text-center>
+            <button ion-button full icon-start color="cred" style="height: 3em;"  no-margin>
+            <ion-icon name="close" style="font-size:1.8rem"></ion-icon>
+            <span text-uppercase style="font-size:1rem">Sell</span>
+            </button>
+          </ion-col>
+          <ion-col col-4 text-center>
+            <button ion-button full icon-start color="cyellow" style="height: 3em; color:white;"  no-margin>
+            <ion-icon name="list-box" color="white" style="font-size:1.8rem"></ion-icon>
+            <span text-uppercase style="font-size:1rem">Details</span>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+          
+      
+    
+    </div>
+    </ion-label>
+    </ion-item>
+ 
+      <ion-item-options side="right">
+        <button ion-button (click)="delete(item)" color="danger" class="cslide" icon-start>
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+     <!--</div>-->
+    </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</div>
+</ion-row>
+  <ion-row class="notifications" style="height:20vh" *ngIf="searchbar">
+      <div class="scroll">
+   <ion-item no-padding no-margin class="backcolor" style="border-bottom: 1px solid;height:2em;line-height:2em;padding-bottom:6px;">
+     <ion-grid no-padding>
+      <ion-row padding-left>
+        <ion-col col-3  text-nowrap >
+          <span text-uppercase style="font-weight: bold;font-size: 0.8em;color: #195492;">Recent Search</span>
+        </ion-col>
+      <!--<ion-col col-9 text-nowrap no-padding>
+       <ion-buttons end>
+      <button ion-button class="trans-background cbutton" outline no-margin *ngIf="show" (click)="select('1')" [class.rbutton]="checkActiveButton('1')">
+        1
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('2')" [class.rbutton]="checkActiveButton('2')">
+        2
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('3')" [class.rbutton]="checkActiveButton('3')">
+        3
+      </button>
+       <button ion-button class="trans-background cbutton" outline  no-margin *ngIf="show" (click)="select('4')" [class.rbutton]="checkActiveButton('4')">
+        4
+      </button>
+       <button ion-button class="trans-background cbutton" outline no-margin *ngIf="show" (click)="select('5')" [class.rbutton]="checkActiveButton('5')">
+        5
+      </button>
+      <button ion-button [ngClass]="{'red-background-border': show}" class="trans-background cbutton cOptionIcon" outline no-margin (click)="toggle()">
+       <ion-icon name="options"></ion-icon>
+      </button> 
+    </ion-buttons>
+      </ion-col>-->
+      </ion-row>
+  </ion-grid>
+  </ion-item>
+   <ion-list>
+     <!--<ion-item-sliding *ngFor="let item of recentitems">-->
+ 
+    <ion-item no-padding  no-margin no-padding *ngFor="let item of recentitems">
+      <ion-label style="margin: 0 0 0 0">
+    <ion-item (click)="openMenu(item)" no-lines no-padding [ngClass]="{'backcolor':!menuOpen(item)}">
+      <ion-label style="margin: 13px 0 0 0">
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col col-1 text-center>
+              <ion-icon name="radio-button-on" [color]="item.iconColor" style="text-shadow: 0px 0px 25px;font-size: 0.6em;"></ion-icon>
+              
+          </ion-col>
+          <ion-col col-4 text-justify>
+              <h2 style="font-size: 1.2rem">{{item.name}}</h2>
+              <h4 style="font-size: 1rem">{{item.subName}}</h4>
+          </ion-col>
+          <ion-col col-4 text-center>
+              <img [src]="item.graph">
+          </ion-col>
+          <ion-col col-3 text-right>
+              <h2 [attr.color]="item.textColor" padding-right style="font-size: 1.2rem">{{item.amount}}</h2>
+              <h3 style="font-size: 1rem">{{item.per}} <ion-icon [name]="item.arrow" [color]="item.textColor" padding-right></ion-icon></h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid >
+      </ion-label>
+    </ion-item>
+    <!--<div *ngIf="menuOpen(item)" no-margin>
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col col-4 text-center>
+            <button ion-button full icon-start color="cblue" style="height: 3em;" no-margin>
+              <ion-icon name="add-circle" color="white" style="font-size:1.8rem"></ion-icon>
+              <span text-uppercase style="font-size:1rem">Buy</span>
+              </button>
+          </ion-col>
+          <ion-col col-4 text-center>
+            <button ion-button full icon-start color="cred" style="height: 3em;"  no-margin>
+            <ion-icon name="close" style="font-size:1.8rem"></ion-icon>
+            <span text-uppercase style="font-size:1rem">Sell</span>
+            </button>
+          </ion-col>
+          <ion-col col-4 text-center>
+            <button ion-button full icon-start color="cyellow" style="height: 3em; color:white;"  no-margin>
+            <ion-icon name="list-box" color="white" style="font-size:1.8rem"></ion-icon>
+            <span text-uppercase style="font-size:1rem">Details</span>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+          
+      
+    
+    </div>-->
+    </ion-label>
+    </ion-item>
+ 
+      <!--<ion-item-options side="right">
+        <button ion-button (click)="delete(item)" color="danger" class="cslide" icon-start>
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>-->
+    <!--</ion-item-sliding>-->
+
+    </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</div>
+</ion-row>
+</ion-grid>
+</ion-content>
+
+
+<ion-footer no-border class="background" style="background-size: 100% 100%;">
+  <ion-toolbar class="cheader" trans>
+    <!--<ion-buttons start>
+      <button menuToggle class="trans-background" >
+        <img src="assets/menu/menu.png" style="width: 20px;height: 20px">
+      </button>
+    </ion-buttons>
+    <div></div>
+    <ion-buttons end>
+      <button class="trans-background">
+        <img src="assets/menu/orderbook.png" class="menu-img">
+      </button>
+      <button class="trans-background">
+        <img src="assets/menu/watchlist.png" class="menu-img">
+      </button>
+      <button class="trans-background">
+        <img src="assets/menu/search.png" class="menu-img">
+      </button>
+      <button class="trans-background">
+        <img src="assets/menu/notification.png" class="menu-img">
+      </button>
+    </ion-buttons>-->
+    <ion-buttons>
+    <div style="display:flex" >
+      <button  class="trans-background" style="flex:1" (click)='toggleMenu()'>
+        <img src="assets/menu/menu.png" style="width: 20px;height: 20px">
+      </button>
+      <button class="trans-background" style="flex:1">
+        <img src="assets/menu/orderbook.png" class="menu-img" >
+      </button>
+      <button class="trans-background" style="flex:1">
+        <img src="assets/menu/watchlist.png" class="menu-img">
+      </button>
+      <button class="trans-background" style="flex:1" (click)='toggleSearch()'>
+        <img src="assets/menu/search.png" class="menu-img">
+      </button>
+      <button class="trans-background" style="flex:1">
+        <img src="assets/menu/notification.png" class="menu-img">
+      </button>
+      
+    </div>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-footer>

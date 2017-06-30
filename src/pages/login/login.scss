@@ -1,0 +1,43 @@
+page-login {
+
+// .item-input ion-input[type="password"]:after {
+//     content: "\f2e9";
+//     font-family: "Ionicons";
+//     line-height: 2em;
+//   }
+
+.item-input ion-input[type="password"] {
+  
+}
+
+
+  ion-input[type="password"] {
+    display: inline-flex;
+  }
+
+// .item { border-style: none }
+  
+  .scroll-content {
+      overflow-y: hidden !important;
+      padding-bottom: 0 !important;
+  }
+ 
+
+  .main-text {
+    color: white;
+    font-size: -webkit-xxx-large;
+    font-weight: 900;
+    height: 30%;
+    line-height: 4em; 
+    font-style: italic;
+  }
+
+  .footer-background {
+    background-image: url('/assets/background/menu-bg-img.jpg');
+    height: 10vh;
+    background-size: 100%;
+    padding-bottom: 16vh;
+    background-repeat: no-repeat;
+  }
+
+}
