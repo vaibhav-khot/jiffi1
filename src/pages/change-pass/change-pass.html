@@ -39,7 +39,7 @@
 
   </ion-card>
 
-  <div text-center style="color:black;" padding-top (click)="forgetPass()">Still didn't receive password?
+  <div text-center style="color:black;" padding-top>Still didn't receive password?
     <span style="color:red;"> Click here to resend</span>
   </div>
 
@@ -47,6 +47,6 @@
 
 
 <ion-footer no-border no-padding class="footer-background">
-  <button ion-button full margin-top color="cyellow" style="color: white" text-uppercase>Change Password</button>
+  <button ion-button full margin-top color="cyellow" style="color: white" text-uppercase (click)="changePass()">Change Password</button>
 </ion-footer>
 

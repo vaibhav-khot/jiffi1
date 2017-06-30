@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { LoginPage } from '../login/login';
 /**
  * Generated class for the ChangePassPage page.
  *
@@ -19,6 +19,10 @@ export class ChangePassPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChangePassPage');
+  }
+  
+  changePass() {
+    this.navCtrl.push(LoginPage)
   }
 
 }

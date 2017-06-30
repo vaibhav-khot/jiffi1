@@ -4,7 +4,14 @@ page-change-pass {
     font-family: "Ionicons";
     line-height: 2em;
   }
+
   ion-input[type="password"] {
     display: inline-flex;
   }
+
+  .scroll-content {
+      overflow-y: hidden !important;
+      padding-bottom: 0 !important;
+  }
+
 }

@@ -20,12 +20,15 @@ import { IonicPage,
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class DashboardPage {
+
+
   show:boolean = false;
   activePage: any;
   downMenu: any;
   items:any=[];
   recentitems:any=[];
   searchbar:any=false;
+
   data:any = [
     {id:'1' ,iconColor: 'cblue', name:'TATA COFFEE', subName: 'BSE',graph:'assets/graph.png', amount:'500',per:'2%(12.00)' , arrow:'arrow-round-up', textColor:'cblue'},
     {id:'2' ,iconColor: 'cred', name:'TATA COFFEE', subName: 'BSE',graph:'assets/graph.png', amount:'1,520',per:'2%(12.00)' , arrow:'arrow-round-up', textColor:'cblue'},
@@ -34,6 +37,8 @@ export class DashboardPage {
     {id:'5' ,iconColor: 'cblue', name:'TATA COFFEE', subName: 'BSE',graph:'assets/graph.png', amount:'80',per:'2%(12.00)' , arrow:'arrow-round-up', textColor:'cblue'},
     {id:'6' ,iconColor: 'cblue', name:'TATA COFFEE', subName: 'BSE',graph:'assets/graph.png', amount:'600',per:'2%(12.00)' , arrow:'arrow-round-up', textColor:'cblue'}
     ]
+
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -60,6 +65,7 @@ export class DashboardPage {
  select(item) {
   this.activePage = item;
  }
+
  checkActiveButton(item): boolean {
    return item === this.activePage;
  }
@@ -105,6 +111,5 @@ export class DashboardPage {
    else {
     this.searchbar = true;
    }
-
  }
 }

@@ -35,25 +35,23 @@ icon:any = "eye";
     console.log('ionViewDidLoad LoginPage');
     this.menu.enable(false, 'loggedInMenu');
   }
+
   forgetPass() {
     this.navCtrl.push(LoginRestPasswordPage);
   }
+
   signIn() {
     if(this.user.clientID == "0" && this.user.password == "0" )
       this.navCtrl.setRoot(DashboardPage)
     else {
-      alert("Wrong Password or User Name")
+      alert("User:'0' Pass:'0'")
     }
   }
-  // ionViewDidLeave() {
-  //   this.menu.enable(true);
-  // }
+  
   showHidePass() {
     if(this.icon == 'eye' )
     this.icon = "eye-off";
     else 
-    this.icon = "eye";
-    
-    
+    this.icon = "eye";  
   }
 }
